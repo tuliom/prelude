@@ -194,11 +194,6 @@
 ;; enabled auto-fill mode in text-mode and all related modes
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
-;; load yasnippet
-(require 'yasnippet)
-(add-to-list 'yas/snippet-dirs prelude-snippets-dir)
-(yas/global-mode 1)
-
 ;; projectile is a project management mode
 (require 'projectile)
 (projectile-global-mode t)
@@ -280,7 +275,7 @@ indent yanked text (with prefix arg don't indent)."
 (require 'eshell)
 (setq eshell-directory-name (concat prelude-savefile-dir "/eshell/"))
 
-(setq semanticdb-default-save-directory 
+(setq semanticdb-default-save-directory
       (concat prelude-savefile-dir "semanticdb"))
 
 ;; enable Prelude's keybindings

@@ -47,8 +47,6 @@ by Prelude.")
 (defvar prelude-vendor-dir (concat prelude-dir "vendor/")
   "This directory house Emacs Lisp packages that are not yet available in
 ELPA (or MELPA).")
-(defvar prelude-snippets-dir (concat prelude-dir "snippets/")
-  "This folder houses addition yasnippet bundles distributed with Prelude.")
 (defvar prelude-savefile-dir (concat prelude-dir "savefile/")
   "This folder stores all the automatically generated save/history-files.")
 

@@ -41,9 +41,10 @@
 ;; required because of a package.el bug
 (setq url-http-attempt-keepalives nil)
 
-(defvar prelude-packages
-  '(ack-and-a-half expand-region gist guru-mode helm helm-projectile magit magithub melpa
-                   rainbow-mode volatile-highlights yasnippet zenburn-theme)
+(defvar prelude-packages '(ack-and-a-half
+			   expand-region gist guru-mode helm helm-projectile
+			   magit magithub melpa rainbow-mode
+			   volatile-highlights zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()

@@ -70,3 +70,10 @@
 (require 'org-latex)
 ;; Enable compatibility with X clipper on terminal
 (require 'xclip)
+
+;; Indicate the maximum column with a line
+(require 'fill-column-indicator)
+(setq-default fci-rule-column 80)
+(define-globalized-minor-mode global-fci-mode
+  fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)

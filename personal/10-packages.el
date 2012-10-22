@@ -7,6 +7,7 @@
 			 auto-complete
 			 autopair
 			 idle-highlight-mode
+			 fill-column-indicator
 			 prelude-c
 			 prelude-emacs-lisp
 			 prelude-xml

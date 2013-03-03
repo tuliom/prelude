@@ -11,21 +11,6 @@
 (add-hook 'prelude-emacs-lisp-mode-hook 'reconfigure-radical-modes t)
 
 ;;
-;; Frame size
-;;
-(defun set-frame-size-according-to-resolution ()
-  (interactive)
-  (if window-system
-      (progn
-        ;; Default width is 84
-        (add-to-list 'default-frame-alist '(width . 84))
-        ;; Subtract the size of the bar before finding the number of lines
-        (add-to-list 'default-frame-alist
-                     (cons 'height (/ (- (x-display-pixel-height) 0)
-                                      (- (frame-char-height) 1)))))))
-(add-hook 'after-init-hook 'set-frame-size-according-to-resolution)
-
-;;
 ;; Set some programming variables
 ;;
 (defun apply-code-settings ()

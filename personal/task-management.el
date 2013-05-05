@@ -21,13 +21,23 @@
   (org-agenda-log-mode)
   (org-agenda-week-view))
 
+(defun toggle-org-agenda-list ()
+  "Open the Org Agenda list or close it, when it's already open."
+  (interactive)
+  (setq buf (buffer-name))
+  (if (equal buf "*Org Agenda*")
+      (progn
+	(delete-window)
+	(kill-buffer buf))
+    (org-agenda-list)))
+
 ;; Keyboard shortcuts
 (global-set-key (kbd "<f5>") 'open-gtd-file)
 
 ;; Enable some shortcuts only after opening org-mode for the first time
 (add-hook 'org-mode-hook
           (lambda ()
-            (global-set-key (kbd "<f6>") 'org-agenda-list)
+            (global-set-key (kbd "<f6>") 'toggle-org-agenda-list)
             (global-set-key (kbd "<f7>") 'org-todo-list)
             (global-set-key (kbd "<f8>") 'open-org-log)
             (local-set-key (kbd "<f9>") 'org-todo)

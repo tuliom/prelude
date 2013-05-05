@@ -62,3 +62,11 @@
 (define-globalized-minor-mode global-fci-mode
   fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
+
+(defvar contacts-file
+  (quote "~/contacts.org")
+  "Address book file")
+
+;; Use org-mode to manage contacts
+(require 'org-contacts)
+(add-to-list 'org-contacts-files contacts-file)

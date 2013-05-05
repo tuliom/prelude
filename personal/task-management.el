@@ -3,6 +3,11 @@
   (quote "~/Documents/projects/gtd.org")
   "Main GTD file")
 
+;; Notes file
+(defvar notes-file
+  (quote "~/Documents/notes.org")
+  "Main notes file")
+
 ;; Specify which files store tasks
 (add-to-list 'org-agenda-files gtd-file)
 ;; Show blocked items in a dimmed font
@@ -54,3 +59,6 @@
             (local-set-key (kbd "<f11>") 'org-agenda-clock-in)
             (local-set-key (kbd "<f12>") 'org-agenda-clock-out)
             ))
+
+;; Set the notes file to use with org-capture
+(setq org-default-notes-file notes-file)
